@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Places the video behind other content */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video covers the entire background */
+}
+
+.container {
+    width: 450px;
+    padding: 40px;
+    background: transparent;/* Slight transparency for readability */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.title {
+    font-size: 2.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serifs;
+    color: #6fbdae;
+    margin-bottom: 20px;
+}
+
+.url-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.url-form input {
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.url-form input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.url-form button {
+    display: block; /* Makes the button a block-level element */
+    margin: 0 auto; /* Centers the button horizontally */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    width: 150px; /* Adjust the width as needed */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s all ease-in-out;
+}
+
+.url-form button:hover {
+    background-color: #0056b3;
+    width: 330px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.short-url {
+    font-size: 1em;
+    color: #555;
+    background-color: #b9babd;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.copy-btn {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #218838;
+}

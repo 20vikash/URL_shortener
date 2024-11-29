@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{QUERY_STRING} ^hash=([0-9a-zA-Z]+)$
+RewriteRule ^$ /%1? [L,R=301]
+
+RewriteRule ^([0-9a-zA-Z]+)$ /index.php?hash=$1 [L]
